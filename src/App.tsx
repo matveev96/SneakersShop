@@ -8,6 +8,11 @@ import {Error404} from "./components/pages/Error404";
 
 
 function App() {
+
+    const linkStyle =  (isActive: boolean) => {
+        return `${styles.navLink} ${isActive ? styles.activeNavLink : ""}`
+    }
+
     return (
         <div>
             <div className={styles.header}><h1>HEADER</h1></div>
@@ -15,19 +20,19 @@ function App() {
                 <div className={styles.nav}>
                     <div>
                         <NavLink to='/page1'
-                                 className={({isActive}) => `${styles.navLink} ${isActive ? styles.activeNavLink : ""}`}>
+                                 className={({isActive}) => linkStyle(isActive)}>
                             Page1
                         </NavLink>
                     </div>
                     <div>
                         <NavLink to='/page2'
-                                 className={({isActive}) => `${styles.navLink} ${isActive ? styles.activeNavLink : ""}`}>
+                                 className={({isActive}) => linkStyle(isActive)}>
                             Page2
                         </NavLink>
                     </div>
                     <div>
                         <NavLink to='/page3'
-                                 className={({isActive}) => `${styles.navLink} ${isActive ? styles.activeNavLink : ""}`}>
+                                 className={({isActive}) => linkStyle(isActive)}>
                             Page3
                         </NavLink>
                     </div>
