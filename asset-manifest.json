@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/matveev96/microtask-sprint3.1/static/css/main.e6c13ad2.css",
+    "main.js": "/matveev96/microtask-sprint3.1/static/js/main.5eb977a2.js",
+    "static/js/453.ed3810f9.chunk.js": "/matveev96/microtask-sprint3.1/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/matveev96/microtask-sprint3.1/index.html",
+    "main.e6c13ad2.css.map": "/matveev96/microtask-sprint3.1/static/css/main.e6c13ad2.css.map",
+    "main.5eb977a2.js.map": "/matveev96/microtask-sprint3.1/static/js/main.5eb977a2.js.map",
+    "453.ed3810f9.chunk.js.map": "/matveev96/microtask-sprint3.1/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.5eb977a2.js"
+  ]
+}
