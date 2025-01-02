@@ -14,13 +14,22 @@ function App() {
             <div className={styles.body}>
                 <div className={styles.nav}>
                     <div>
-                        <NavLink to='/page1'>Page1</NavLink>
+                        <NavLink to='/page1'
+                                 className={({isActive}) => `${styles.navLink} ${isActive ? styles.activeNavLink : ""}`}>
+                            Page1
+                        </NavLink>
                     </div>
                     <div>
-                        <NavLink to='/page2'>Page2</NavLink>
+                        <NavLink to='/page2'
+                                 className={({isActive}) => `${styles.navLink} ${isActive ? styles.activeNavLink : ""}`}>
+                            Page2
+                        </NavLink>
                     </div>
                     <div>
-                        <NavLink to='/page3'>Page3</NavLink>
+                        <NavLink to='/page3'
+                                 className={({isActive}) => `${styles.navLink} ${isActive ? styles.activeNavLink : ""}`}>
+                            Page3
+                        </NavLink>
                     </div>
                 </div>
                 <div className={styles.content}>
