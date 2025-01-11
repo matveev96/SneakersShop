@@ -52,11 +52,36 @@ const Footer = styled.div`
     color: white;
 `
 
+const PictureWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    &>a>img {
+        width: 200px;
+        height: 200px;
+    }
+`
+
+const ModelContainer = styled.div`
+    text-align: center;
+    &>img {
+        width: 400px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    &>span {
+        display: block;
+        margin-bottom: 20px;
+    }
+`
+
 export const S = {
     NavWrapper,
     Header,
     Body,
     Navigation,
     Content,
-    Footer
+    Footer,
+    PictureWrapper,
+    ModelContainer
 }
