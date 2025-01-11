@@ -1,27 +1,45 @@
 import React from 'react';
-import {adidasArr} from "./PageOne";
-import {abibasArr} from "./PageThree";
-import {pumaArr} from "./PageTwo";
+import {adidasArr} from "./Adidas";
+import {abibasArr} from "./Abibas";
+import {pumaArr} from "./Puma";
 import {useParams} from "react-router-dom";
 import {S} from './_styles';
 
+export type ShoesItem = {
+    id: string
+    model: string;
+    collection: string;
+    price: string;
+    picture: string;
+}
+
+type ModelType = {
+    [key: string]: ShoesItem[];
+}
+
+const modelShoes: ModelType = {
+    adidas: adidasArr,
+    abibas: abibasArr,
+    puma: pumaArr
+}
+
 export const Model = () => {
 
-    const params = useParams();
-    const shoesArr = [...adidasArr, ...abibasArr, ...pumaArr]
-    const shoes = shoesArr.find(el => el.id === params.id)
-    if (!shoes) return (
-        <S.ModelContainer>
-            <span>Not Found</span>
-        </S.ModelContainer>
-    )
+    const {model, id} = useParams();
+
+    const shoes = model ? modelShoes[model].find(el => el.id === id) : null
+
     return (
         <S.ModelContainer>
-            <h2>{shoes.model}</h2>
-            <span>{shoes.collection}</span>
-            <span>{shoes.price}</span>
-            <img src={shoes.picture} alt={shoes.model}/>
+            {shoes ?
+                <>
+                    <h2>{shoes.model}</h2>
+                    <span>{shoes.collection}</span>
+                    <span>{shoes.price}</span>
+                    <img src={shoes.picture} alt={shoes.model}/>
+                </> :
+                <span>Shoes Not Found</span>
+            }
         </S.ModelContainer>
-
     )
 }
