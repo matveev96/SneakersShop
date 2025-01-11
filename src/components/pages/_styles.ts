@@ -71,6 +71,7 @@ const ModelContainer = styled.div`
     }
     &>span {
         display: block;
+        font-weight: bold;
         margin-bottom: 20px;
     }
 `
