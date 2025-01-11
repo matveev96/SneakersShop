@@ -4,15 +4,9 @@ import abibas2 from '../../assets/abibas2.jpeg'
 import abibas3 from '../../assets/abibas3.jpg'
 import {Link} from "react-router-dom";
 import {S} from "./_styles";
+import {ShoesItem} from "./Model";
 
-export type AbibasItem = {
-    id: string
-    model: string;
-    collection: string;
-    price: string;
-    picture: string;
-}
-export const abibasArr: AbibasItem[] = [
+export const abibasArr: ShoesItem[] = [
     {
         id: 'abib0',
         model: 'ABIBAS ABIFOM TRXN',
@@ -37,13 +31,13 @@ export const abibasArr: AbibasItem[] = [
     }
 ]
 
-export const PageThree = () => {
+export const Abibas = () => {
     return (
         <div>
             <h2>ABIBAS</h2>
             <S.PictureWrapper>
                 {abibasArr.map((el, index) => (
-                        <Link to={`/${el.id}`} key={index}>
+                        <Link to={`/abibas/${el.id}`} key={index}>
                             <img src={el.picture}
                                  alt={el.model}/>
                         </Link>

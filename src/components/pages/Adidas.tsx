@@ -1,19 +1,12 @@
 import React from 'react';
 import adidasModel1 from './../../assets/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp'
 import adidasModel2 from './../../assets/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp'
-import adidasModel3
-    from './../../assets/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp'
+import adidasModel3 from './../../assets/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp'
 import {S} from './_styles';
 import {Link} from "react-router-dom";
+import {ShoesItem} from "./Model";
 
-export type AdidasItem = {
-    id: string
-    model: string;
-    collection: string;
-    price: string;
-    picture: string;
-}
-export const adidasArr: AdidasItem[] = [
+export const adidasArr: ShoesItem[] = [
     {
         id: 'ad0',
         model: 'ADIDAS ADIFOM TRXN',
@@ -38,13 +31,13 @@ export const adidasArr: AdidasItem[] = [
     }
 ]
 
-export const PageOne = () => {
+export const Adidas = () => {
     return (
         <div>
             <h2 style={{textAlign: 'center'}}> ADIDAS</h2>
             <S.PictureWrapper>
                 {adidasArr.map((el, index) => (
-                        <Link to={`/${el.id}`} key={index}>
+                        <Link to={`/adidas/${el.id}`} key={index}>
                             <img src={el.picture}
                                  alt={el.model}/>
                         </Link>

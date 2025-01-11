@@ -4,15 +4,9 @@ import puma2 from '../../assets/puma2.jpeg'
 import puma3 from '../../assets/puma3.jpg'
 import {Link} from "react-router-dom";
 import {S} from "./_styles";
+import {ShoesItem} from "./Model";
 
-export type PumaItem = {
-    id: string
-    model: string;
-    collection: string;
-    price: string;
-    picture: string;
-}
-export const pumaArr: PumaItem[] = [
+export const pumaArr: ShoesItem[] = [
     {
         id: 'pum0',
         model: 'PUMA ADIFOM TRXN',
@@ -37,13 +31,13 @@ export const pumaArr: PumaItem[] = [
     }
 ]
 
-export const PageTwo = () => {
+export const Puma = () => {
     return (
         <div>
             <h2>PUMA</h2>
             <S.PictureWrapper>
                 {pumaArr.map((el, index) => (
-                        <Link to={`/${el.id}`} key={index}>
+                        <Link to={`/puma/${el.id}`} key={index}>
                             <img src={el.picture}
                                  alt={el.model}/>
                         </Link>
