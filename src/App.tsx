@@ -5,11 +5,12 @@ import {PageThree} from "./components/pages/PageThree";
 import {Navigate, NavLink, Route, Routes} from "react-router-dom";
 import {Error404} from "./components/pages/Error404";
 import { S } from './components/pages/_styles';
+import {Model} from "./components/pages/Model";
 
 const PATH = {
-    PAGE1: 'page1',
-    PAGE2: 'page2',
-    PAGE3: 'page3',
+    PAGE1: 'adidas',
+    PAGE2: 'puma',
+    PAGE3: 'abibas',
     ERROR: '*'
 } as const
 
@@ -21,17 +22,17 @@ function App() {
                 <S.Navigation>
                     <S.NavWrapper>
                         <NavLink to={PATH.PAGE1}>
-                            Page1
+                            Adidas
                         </NavLink>
                     </S.NavWrapper>
                     <S.NavWrapper>
                         <NavLink to={PATH.PAGE2}>
-                            Page2
+                            Puma
                         </NavLink>
                     </S.NavWrapper>
                     <S.NavWrapper>
                         <NavLink to={PATH.PAGE3}>
-                            Page3
+                            Abibas
                         </NavLink>
                     </S.NavWrapper>
                 </S.Navigation>
@@ -41,6 +42,7 @@ function App() {
                         <Route path={PATH.PAGE2} element={<PageTwo/>}/>
                         <Route path={PATH.PAGE3} element={<PageThree/>}/>
                         <Route path={PATH.ERROR} element={<Error404/>}/>
+                        <Route path={':id'} element={<Model/>}/>
                         <Route path={'/'} element={<Navigate to='/page1'/>}/>
                     </Routes>
                 </S.Content>
