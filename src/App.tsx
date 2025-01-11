@@ -1,7 +1,7 @@
 import React from 'react';
-import {PageOne} from "./components/pages/PageOne";
-import {PageTwo} from "./components/pages/PageTwo";
-import {PageThree} from "./components/pages/PageThree";
+import {Adidas} from "./components/pages/Adidas";
+import {Puma} from "./components/pages/Puma";
+import {Abibas} from "./components/pages/Abibas";
 import {Navigate, NavLink, Route, Routes} from "react-router-dom";
 import {Error404} from "./components/pages/Error404";
 import { S } from './components/pages/_styles';
@@ -11,7 +11,9 @@ const PATH = {
     PAGE1: 'adidas',
     PAGE2: 'puma',
     PAGE3: 'abibas',
-    ERROR: '*'
+    ERROR: '*',
+    MODEL: ':model/:id',
+    DEFAULT: '/'
 } as const
 
 function App() {
@@ -38,12 +40,12 @@ function App() {
                 </S.Navigation>
                 <S.Content>
                     <Routes>
-                        <Route path={PATH.PAGE1} element={<PageOne/>}/>
-                        <Route path={PATH.PAGE2} element={<PageTwo/>}/>
-                        <Route path={PATH.PAGE3} element={<PageThree/>}/>
+                        <Route path={PATH.PAGE1} element={<Adidas/>}/>
+                        <Route path={PATH.PAGE2} element={<Puma/>}/>
+                        <Route path={PATH.PAGE3} element={<Abibas/>}/>
                         <Route path={PATH.ERROR} element={<Error404/>}/>
-                        <Route path={':id'} element={<Model/>}/>
-                        <Route path={'/'} element={<Navigate to='/page1'/>}/>
+                        <Route path={PATH.MODEL} element={<Model/>}/>
+                        <Route path={PATH.DEFAULT} element={<Navigate to='/adidas'/>}/>
                     </Routes>
                 </S.Content>
             </S.Body>
