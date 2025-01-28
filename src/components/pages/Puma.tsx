@@ -11,7 +11,7 @@ export const pumaArr: ShoesItem[] = [
         id: 'pum0',
         model: 'PUMA ADIFOM TRXN',
         collection: 'new collection1',
-        price: '124200$',
+        price: '124$',
         picture: puma1,
 
     },
@@ -19,14 +19,14 @@ export const pumaArr: ShoesItem[] = [
         id: 'pum1',
         model: 'PUMA ADIFOM SUPER',
         collection: 'new collection22',
-        price: '9876300$',
+        price: '98$',
         picture: puma2
     },
     {
         id: 'pum2',
         model: 'PUMA SUPER SUPERSKI',
         collection: 'new collection333',
-        price: '3121400$',
+        price: '312$',
         picture: puma3
     }
 ]

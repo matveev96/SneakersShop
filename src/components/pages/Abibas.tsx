@@ -11,7 +11,7 @@ export const abibasArr: ShoesItem[] = [
         id: 'abib0',
         model: 'ABIBAS ABIFOM TRXN',
         collection: 'new collection1',
-        price: '100200$',
+        price: '12$',
         picture: abibas1,
 
     },
@@ -19,14 +19,14 @@ export const abibasArr: ShoesItem[] = [
         id: 'abib1',
         model: 'ABIBAS ABIFOM SUPER',
         collection: 'new collection22',
-        price: '200300$',
+        price: '21$',
         picture: abibas2
     },
     {
         id: 'abib2',
         model: 'ABIBAS SUPERB SUPERSKIB',
         collection: 'new collection333',
-        price: '300400$',
+        price: '37$',
         picture: abibas3
     }
 ]

@@ -11,7 +11,7 @@ export const adidasArr: ShoesItem[] = [
         id: 'ad0',
         model: 'ADIDAS ADIFOM TRXN',
         collection: 'new collection1',
-        price: '100200$',
+        price: '100$',
         picture: adidasModel1,
 
     },
@@ -19,14 +19,14 @@ export const adidasArr: ShoesItem[] = [
         id: 'ad1',
         model: 'ADIDAS ADIFOM SUPER',
         collection: 'new collection22',
-        price: '200300$',
+        price: '200$',
         picture: adidasModel2
     },
     {
         id: 'ad2',
         model: 'ADIDAS SUPER SUPERSKI',
         collection: 'new collection333',
-        price: '300400$',
+        price: '300$',
         picture: adidasModel3
     }
 ]
