@@ -27,7 +27,9 @@ export const Model = () => {
 
     const {model, id} = useParams();
 
-    const shoes = model ? modelShoes[model].find(el => el.id === id) : null
+    const shoes = model
+        ? modelShoes[model].find(el => el.id === id)
+        : null
 
     return (
         <S.ModelContainer>
