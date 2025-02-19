@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/microtask-sprint3.1/static/css/main.e6c13ad2.css",
-    "main.js": "/microtask-sprint3.1/static/js/main.8eb52a07.js",
+    "main.css": "/microtask-sprint3.1/static/css/main.6c942b1a.css",
+    "main.js": "/microtask-sprint3.1/static/js/main.0f8378ac.js",
     "static/js/453.ed3810f9.chunk.js": "/microtask-sprint3.1/static/js/453.ed3810f9.chunk.js",
     "static/media/abibas3.jpg": "/microtask-sprint3.1/static/media/abibas3.42ccc6c2b13aea0494dd.jpg",
     "static/media/abibas1.jpg": "/microtask-sprint3.1/static/media/abibas1.dcbdbf78473aae1a95ba.jpg",
@@ -11,12 +11,12 @@
     "static/media/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp": "/microtask-sprint3.1/static/media/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.b43badfb5bc18129337b.webp",
     "static/media/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp": "/microtask-sprint3.1/static/media/Superstar_XLG_Shoes_Black_IG9777_01_standard.bfcb34a2e48044d7f26f.webp",
     "index.html": "/microtask-sprint3.1/index.html",
-    "main.e6c13ad2.css.map": "/microtask-sprint3.1/static/css/main.e6c13ad2.css.map",
-    "main.8eb52a07.js.map": "/microtask-sprint3.1/static/js/main.8eb52a07.js.map",
+    "main.6c942b1a.css.map": "/microtask-sprint3.1/static/css/main.6c942b1a.css.map",
+    "main.0f8378ac.js.map": "/microtask-sprint3.1/static/js/main.0f8378ac.js.map",
     "453.ed3810f9.chunk.js.map": "/microtask-sprint3.1/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.8eb52a07.js"
+    "static/css/main.6c942b1a.css",
+    "static/js/main.0f8378ac.js"
   ]
 }
