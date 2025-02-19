@@ -9,7 +9,7 @@ import {Model} from "../components/pages/Model";
 import {Prices} from "../components/pages/Prices";
 import {PrivatePage} from "../components/pages/ProtectedPage";
 import Login from "../components/pages/Login";
-import {PrivateRoutes} from "./ProtectedRoute";
+import {PrivateRoutes} from "./PrivateRoutes";
 
 export const PATH = {
     ADIDAS: '/adidas',
@@ -19,7 +19,8 @@ export const PATH = {
     PROTECTED_PAGE: '/protectedPage',
     MODEL: '/:model/:id',
     ERROR: '/error',
-    LOGIN: '/login'
+    LOGIN: '/login',
+    MAIN_PAGE: '/'
 } as const
 
 const publicRoutes: RouteObject[] = [
@@ -50,23 +51,29 @@ const publicRoutes: RouteObject[] = [
     {
         path: PATH.ERROR,
         element: <Error404/>,
+    },
+    {
+        path: PATH.MAIN_PAGE,
+        element: <Navigate to={PATH.ADIDAS}/>,
     }
 ]
 
 const privateRoutes: RouteObject[] = [
     {
         path: PATH.PROTECTED_PAGE,
-        element: (
-            <PrivatePage/>
-        )
+        element: <PrivatePage/>
     },
 ]
 
 export const router = createBrowserRouter([
+    // {
+    //     path: PATH.MAIN_PAGE,
+    //     element: <RedirectPage />,
+    //     errorElement: <Navigate to={PATH.ERROR}/>
+    // },
     {
         path: "/",
         element: <App/>,
-        errorElement: <Navigate to={PATH.ERROR}/>,
         children: [
             {
                 element: <PrivateRoutes/>,
