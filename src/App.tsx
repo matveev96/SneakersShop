@@ -1,8 +1,7 @@
 import React from 'react';
-import {Link, NavLink, Outlet, useNavigate} from "react-router-dom";
+import {NavLink, Outlet, useNavigate} from "react-router-dom";
 import {S} from './components/pages/_styles';
 import {PATH} from "./routes/router";
-import styles from "./components/Site.module.css"
 
 function App() {
 
@@ -14,7 +13,7 @@ function App() {
     }
 
     return (
-        <div>
+        <>
             <S.Header><h1>HEADER</h1></S.Header>
             <S.Body>
                 <S.Navigation>
@@ -25,15 +24,15 @@ function App() {
                     <S.NavWrapper><NavLink to={PATH.PROTECTED_PAGE}>Protected Page</NavLink></S.NavWrapper>
                 </S.Navigation>
                 <S.Content>
-                    <div className={styles.HorizontalNavigation}>
-                        <Link className={styles.LinkLikeButton} to={PATH.ADIDAS}> Main Page (ADIDAS) </Link>
-                        <Link className={styles.ButtonLikeLink} onClick={navigateHandler} to={'..'}> Previous Page </Link>
-                    </div>
+                    <S.HorizontalNavigation>
+                        <S.LinkLikeButton to={PATH.ADIDAS}> Main Page (ADIDAS) </S.LinkLikeButton>
+                        <S.ButtonLikeLink onClick={navigateHandler} to={'..'}> Previous Page </S.ButtonLikeLink>
+                    </S.HorizontalNavigation>
                     <Outlet/>
                 </S.Content>
             </S.Body>
             <S.Footer>PODKRADYLI 2024</S.Footer>
-        </div>
+        </>
     );
 }
 
