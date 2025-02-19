@@ -1,4 +1,38 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
+
+const HorizontalNavigation = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
+const LinkLikeButton = styled(Link)`
+    height: 54px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        background-color: #0056b3;
+    }
+`
+
+const ButtonLikeLink = styled(Link)`
+    margin-left: 5px;
+    height: 55px;
+    background-color: #ff00b7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 30px;
+    &:hover{
+        background-color: #980569;
+    }
+`
 
 const NavWrapper=styled.div`
     margin-left: 10px;
@@ -84,5 +118,8 @@ export const S = {
     Content,
     Footer,
     PictureWrapper,
-    ModelContainer
+    ModelContainer,
+    HorizontalNavigation,
+    LinkLikeButton,
+    ButtonLikeLink
 }
